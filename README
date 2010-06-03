@@ -1,0 +1,49 @@
+NAME
+    Catalyst::ControllerRole::Resources::Verbs - Additional verbs for
+    Catalyst::Controller::Resources
+
+SYNOPSIS
+DESCRIPTION
+SEE ALSO
+    ...
+
+BUGS AND LIMITATIONS
+    There are no known bugs in this module.
+
+    Please report problems to Chris Weyl <cweyl@alumni.drew.edu>, or
+    (preferred) to this package's RT tracker at
+    E<bug-Catalyst-ControllerRole-Resources-Verbs@rt.cpan.org>.
+
+    Patches are welcome.
+
+AUTHOR
+    Chris Weyl <cweyl@alumni.drew.edu>
+
+LICENSE AND COPYRIGHT
+    Copyright (c) 2010 <cweyl@alumni.drew.edu>
+
+    This library is free software; you can redistribute it and/or modify it
+    under the terms of the GNU Lesser General Public License as published by
+    the Free Software Foundation; either version 2.1 of the License, or (at
+    your option) any later version.
+
+    This library is distributed in the hope that it will be useful, but
+    WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser
+    General Public License for more details.
+
+    You should have received a copy of the GNU Lesser General Public License
+    along with this library; if not, write to the
+
+        Free Software Foundation, Inc.
+        59 Temple Place, Suite 330
+        Boston, MA  02111-1307  USA
+
+POD ERRORS
+    Hey! The above document had some coding errors, which are explained
+    below:
+
+    Around line 40:
+        Unknown E content in
+        E<bug-Catalyst-ControllerRole-Resources-Verbs@rt.cpan.org>
+
