@@ -29,9 +29,29 @@ Catalyst::ControllerRole::Resources::Verbs - Additional verbs for Catalyst::Cont
 
 =head1 DESCRIPTION
 
+L<Catalyst::Controller::Resources> makes it easy to create a resource-oriented
+controller, but the actual mechanics of extending it with additional "verbs"
+is a little opaque.  This package provides a parameterized role designed to
+make adding additional verbs easy, as well as a number of concrete roles
+implementing additional common actions.
+
+=head1 PARAMETERIZED ROLE
+
+See L<Catalyst::ControllerRole::Resources::Verb> for details.
+
+=head1 CONCRETE ROLES
+
+These implementations live under the
+Catalyst::ControllerRole::Resources::Verb::* namespace.
+
+=head2 Count
+
+L<Catalyst::ControllerRole::Resources::Verb::Count> implements a COLLECTION
+action at the path: resource/count
+
 =head1 SEE ALSO
 
-L<...>
+L<Catalyst::Controller::Resources>, L<Catalyst::Controller::REST>.
 
 =head1 BUGS AND LIMITATIONS
 

@@ -33,9 +33,10 @@ my %attribute = (
 role {
     my $p = shift @_;
 
-    my $verb = $p->verb;
+    die $p->target . ' is not a valid target!'
+        unless exists $attribute{$p->target};
 
-    requires $verb;
+    requires $p->verb;
 
     around $attribute{$p->target} => sub {
         my ($orig, $self) = (shift, shift);
@@ -56,9 +57,26 @@ Catalyst::ControllerRole::Resources::Verb
 
 =head1 SYNOPSIS
 
+    use Moose;
+    use namespace::autoclean;
+
+    BEGIN { extends 'Catalyst::Controller::Resources' }
+
+    with 'Catalyst::ControllerRole::Resources::Verb' => {
+        target  => 'collection',
+        verb    => 'count',
+        method  => 'GET',
+        path    => 'count',
+    };
+
+    # profit!
 
 =head1 DESCRIPTION
 
+This is a parameterized Moose role, that handles the task of extending
+L<Catalyst::Controller::Resources> with additional "verbs".
+
+FIXME more docs plz kthanksbye
 
 =head1 SEE ALSO
 
@@ -83,7 +101,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 Lesser General Public License for more details.
 
 You should have received a copy of the GNU Lesser General Public
-License along with this library; if not, write to the 
+License along with this library; if not, write to the
 
     Free Software Foundation, Inc.
     59 Temple Place, Suite 330
