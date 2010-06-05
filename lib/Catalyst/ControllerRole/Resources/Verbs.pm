@@ -24,9 +24,6 @@ __END__
 
 Catalyst::ControllerRole::Resources::Verbs - Additional verbs for Catalyst::Controller::Resources
 
-=head1 SYNOPSIS
-
-
 =head1 DESCRIPTION
 
 L<Catalyst::Controller::Resources> makes it easy to create a resource-oriented
@@ -47,7 +44,12 @@ Catalyst::ControllerRole::Resources::Verb::* namespace.
 =head2 Count
 
 L<Catalyst::ControllerRole::Resources::Verb::Count> implements a COLLECTION
-action at the path: resource/count
+action that is expected to return the collection count (whatever that means in
+the context you're using it).
+
+    path: count
+    args: none
+    method: GET
 
 =head1 SEE ALSO
 
@@ -57,19 +59,20 @@ L<Catalyst::Controller::Resources>, L<Catalyst::Controller::REST>.
 
 There are no known bugs in this module.
 
-Please report problems to Chris Weyl <cweyl@alumni.drew.edu>, or (preferred) 
-to this package's RT tracker at E<bug-Catalyst-ControllerRole-Resources-Verbs@rt.cpan.org>.
+Please report problems to Chris Weyl <cweyl@alumni.drew.edu>, or (preferred)
+to this package's RT tracker at
+<bug-Catalyst-ControllerRole-Resources-Verbs@rt.cpan.org>.
 
 Patches are welcome.
 
 =head1 AUTHOR
 
-Chris Weyl  <cweyl@alumni.drew.edu>
+Chris Weyl <cweyl@alumni.drew.edu>
 
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2010  <cweyl@alumni.drew.edu>
+Copyright (c) 2010 Chris Weyl <cweyl@alumni.drew.edu>
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -82,7 +85,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 Lesser General Public License for more details.
 
 You should have received a copy of the GNU Lesser General Public
-License along with this library; if not, write to the 
+License along with this library; if not, write to the
 
     Free Software Foundation, Inc.
     59 Temple Place, Suite 330

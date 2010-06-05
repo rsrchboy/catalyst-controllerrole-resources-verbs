@@ -1,4 +1,4 @@
-package Catalyst::ControllerRole::Resources::Verb::Count; 
+package Catalyst::ControllerRole::Resources::Verb::Count;
 
 use Moose::Role;
 use namespace::autoclean;
@@ -7,8 +7,8 @@ our $VERSION = '0.001';
 
 with 'Catalyst::ControllerRole::Resources::Verb' => {
     target  => 'collection',
-    verb    => 'count', 
-    method  => 'GET', 
+    verb    => 'count',
+    method  => 'GET',
     path    => 'count',
 };
 
@@ -22,18 +22,37 @@ Catalyst::ControllerRole::Resources::Verb::Count
 
 =head1 SYNOPSIS
 
+    # in your controller
+    use Moose;
+    use namespace::autoclean;
+
+    BEGIN { extends 'Catalyst::Controller::Resources' }
+    with 'Catalyst::ControllerRole::Resources::Verb::Count';
+
+    sub count { ... }
+
 =head1 DESCRIPTION
+
+L<Catalyst::ControllerRole::Resources::Verb::Count> implements a COLLECTION
+action that is expected to return the collection count (whatever that means in
+the context you're using it).
+
+    path: count
+    args: none
+    method: GET
 
 =head1 SEE ALSO
 
+L<Catalyst::ControllerRole::Resources::Verb>,
+L<Catalyst::ControllerRole::Resources::Verbs>
+
 =head1 AUTHOR
 
-Chris Weyl  <cweyl@alumni.drew.edu>
-
+Chris Weyl <cweyl@alumni.drew.edu>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2010  <cweyl@alumni.drew.edu>
+Copyright (c) 2010 Chris Weyl <cweyl@alumni.drew.edu>
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
@@ -46,7 +65,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 Lesser General Public License for more details.
 
 You should have received a copy of the GNU Lesser General Public
-License along with this library; if not, write to the 
+License along with this library; if not, write to the
 
     Free Software Foundation, Inc.
     59 Temple Place, Suite 330

@@ -2,17 +2,39 @@ NAME
     Catalyst::ControllerRole::Resources::Verbs - Additional verbs for
     Catalyst::Controller::Resources
 
-SYNOPSIS
 DESCRIPTION
+    Catalyst::Controller::Resources makes it easy to create a
+    resource-oriented controller, but the actual mechanics of extending it
+    with additional "verbs" is a little opaque. This package provides a
+    parameterized role designed to make adding additional verbs easy, as
+    well as a number of concrete roles implementing additional common
+    actions.
+
+PARAMETERIZED ROLE
+    See Catalyst::ControllerRole::Resources::Verb for details.
+
+CONCRETE ROLES
+    These implementations live under the
+    Catalyst::ControllerRole::Resources::Verb::* namespace.
+
+  Count
+    Catalyst::ControllerRole::Resources::Verb::Count implements a COLLECTION
+    action that is expected to return the collection count (whatever that
+    means in the context you're using it).
+
+        path: count
+        args: none
+        method: GET
+
 SEE ALSO
-    ...
+    Catalyst::Controller::Resources, Catalyst::Controller::REST.
 
 BUGS AND LIMITATIONS
     There are no known bugs in this module.
 
     Please report problems to Chris Weyl <cweyl@alumni.drew.edu>, or
     (preferred) to this package's RT tracker at
-    E<bug-Catalyst-ControllerRole-Resources-Verbs@rt.cpan.org>.
+    <bug-Catalyst-ControllerRole-Resources-Verbs@rt.cpan.org>.
 
     Patches are welcome.
 
@@ -20,7 +42,7 @@ AUTHOR
     Chris Weyl <cweyl@alumni.drew.edu>
 
 LICENSE AND COPYRIGHT
-    Copyright (c) 2010 <cweyl@alumni.drew.edu>
+    Copyright (c) 2010 Chris Weyl <cweyl@alumni.drew.edu>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Lesser General Public License as published by
@@ -38,12 +60,4 @@ LICENSE AND COPYRIGHT
         Free Software Foundation, Inc.
         59 Temple Place, Suite 330
         Boston, MA  02111-1307  USA
-
-POD ERRORS
-    Hey! The above document had some coding errors, which are explained
-    below:
-
-    Around line 40:
-        Unknown E content in
-        E<bug-Catalyst-ControllerRole-Resources-Verbs@rt.cpan.org>
 

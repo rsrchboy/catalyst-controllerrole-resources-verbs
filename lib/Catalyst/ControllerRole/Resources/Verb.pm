@@ -69,6 +69,9 @@ Catalyst::ControllerRole::Resources::Verb
         path    => 'count',
     };
 
+    # make sure to implement the verb...
+    sub count { ... }
+
     # profit!
 
 =head1 DESCRIPTION
@@ -76,7 +79,19 @@ Catalyst::ControllerRole::Resources::Verb
 This is a parameterized Moose role, that handles the task of extending
 L<Catalyst::Controller::Resources> with additional "verbs".
 
-FIXME more docs plz kthanksbye
+It takes 4 mandatory arguments:
+
+=over 4
+
+=item B<target> - 'member' or 'collection'
+
+=item B<verb> - implementing controller method name
+
+=item B<method> - HTTP method; e.g. GET, POST, etc
+
+=item B<path> - the pathpart of the action
+
+=back
 
 =head1 SEE ALSO
 
@@ -84,11 +99,11 @@ L<Catalyst::ControllerRole::Resources::Verbs>
 
 =head1 AUTHOR
 
-Chris Weyl  <cweyl@alumni.drew.edu>
+Chris Weyl <cweyl@alumni.drew.edu>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright (c) 2010  <cweyl@alumni.drew.edu>
+Copyright (c) 2010 Chris Weyl <cweyl@alumni.drew.edu>
 
 This library is free software; you can redistribute it and/or
 modify it under the terms of the GNU Lesser General Public
