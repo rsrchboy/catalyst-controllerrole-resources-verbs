@@ -17,7 +17,7 @@ package Catalyst::ControllerRole::Resources::Verb;
 use MooseX::Role::Parameterized;
 use namespace::autoclean;
 
-our $VERSION = '0.001';
+our $VERSION = '0.001_01';
 
 # FIXME should type-validate target, verb (at least)
 parameter target => (isa => 'Str', required => 1);

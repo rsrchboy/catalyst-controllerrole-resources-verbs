@@ -3,7 +3,7 @@ package Catalyst::ControllerRole::Resources::Verb::Count;
 use Moose::Role;
 use namespace::autoclean;
 
-our $VERSION = '0.001';
+our $VERSION = '0.001_01';
 
 with 'Catalyst::ControllerRole::Resources::Verb' => {
     target  => 'collection',

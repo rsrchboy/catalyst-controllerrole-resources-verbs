@@ -14,7 +14,7 @@
 
 package Catalyst::ControllerRole::Resources::Verbs;
 
-our $VERSION = '0.001';
+our $VERSION = '0.001_01';
 
 1;
 
