@@ -1,0 +1,5 @@
+Changes for Catalyst::ControllerRole::Resources::Verbs
+
+0.001_01 - Sun Jun 13 2010
+	* Initial devel release; working but no real test suite yet
+
